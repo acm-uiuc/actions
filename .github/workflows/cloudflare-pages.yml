@@ -16,10 +16,10 @@ on:
         description: 'Cloudflare account ID'
         required: true
         type: string
-    secrets:
-      PAGES_API_TOKEN:
+      pages-api-token:
         description: 'Cloudflare Pages API token'
         required: true
+        type: string
 
 jobs:
   deploy:
@@ -74,4 +74,5 @@ jobs:
           body: |
             😢 **Cloudflare Pages - Deployment failed**
             Please check the workflow logs for details.
+
           edit-mode: "replace"
